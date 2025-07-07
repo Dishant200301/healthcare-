@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Services from './pages/Services';
+import Doctors from './pages/Doctors';
+import Blogs from './pages/Blogs';
+import Appointment from './pages/Appointment';
+import ContactUs from './pages/ContactUs';
+import { Contact } from 'lucide-react';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/doctors" element={<Doctors />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/contact" element={<ContactUs/>} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
