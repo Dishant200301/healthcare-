@@ -61,7 +61,7 @@ const HealthcareCTA: React.FC<CTAProps> = ({
             {/* Main Image */}
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="https://cdn.prod.website-files.com/6737288294995c3cfebf9e63/6789eb621ee5aa607fb1a7bc_cta.jpg"
+                src="/assets/img/6788aacf1dded3938b3b6b90/health.jpg"
                 alt="Healthcare professionals"
                 className="w-full h-[400px] md:h-[500px] object-cover"
               />
